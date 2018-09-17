@@ -7,7 +7,7 @@ function swap(array, index){
 }
 
 function bubbleSort(array) {
-  console.log(`before ${array}`);
+ // console.log(`before ${array}`);
   // for(let i = 0; i < array.length - 1; i++) {
   //   for(let j = 0; j < array.length - 1; j++) {
   //     console.log(`inner ${array}`);
