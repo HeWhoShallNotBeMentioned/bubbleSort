@@ -3,13 +3,13 @@ describe('BubbleSort Tests', function () {
   // let array = [1, 2, 3];
   //  array.swap = swap();
 
+  spyOn(window, 'swap').and.callThrough();
+
+  });
+
   it('swap was called', function () {
-    expect(array.swap.calls.count()).toEqual();
+    expect(window.swap.calls.count()).toEqual(0);
   });
-
-  spyOn(array, 'swap').and.callThrough(); // replace existing `tootsiepop['lick']` method
-  });
-
     it('handles an empty array', function () {
       expect(bubbleSort([])).toEqual([]);
     });
