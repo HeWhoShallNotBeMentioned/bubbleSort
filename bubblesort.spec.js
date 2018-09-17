@@ -1,9 +1,9 @@
 beforeAll(function () {
   spyOn(array, 'swap').and.callThrough(); // replace existing `tootsiepop['lick']` method
 });
-it('getting to the center of tootsiepop involves exactly three licks', function () {
+it('sorts things', function () {
   array.bubbleSort();
-  expect(bubbleSort.swap.calls.count()).toEqual(3);
+  expect(bubbleSort.swap.calls.count()).toEqual();
 });
 
 
