@@ -12,18 +12,14 @@ function merge(arrOne, arrTwo) {
   let first = arrOne[0];
   let second = arrTwo[0];
 
-  //debugger;
   while (first || second) {
-    if (!arrOne.length){
+    if (!arrOne.length) {
       masterArray = masterArray.concat(arrTwo)
       second = undefined;
-    } else if (!arrTwo.length){
+    } else if (!arrTwo.length) {
       masterArray = masterArray.concat(arrOne);
       first = undefined;
-    }
-
-
-    else if (first < second) {
+    } else if (first < second) {
       masterArray.push(arrOne[0]);
       arrOne.shift();
       first = arrOne[0];
@@ -32,11 +28,14 @@ function merge(arrOne, arrTwo) {
       arrTwo.shift();
       second = arrTwo[0];
     }
-
   }
   return masterArray;
 }
 
-// if (arr.length === 1 || arr.length === 0) {
-//   return arr;
-// }
+function mergeSort(arr) {
+  if (arr.length === 1 || arr.length === 0) {
+    return arr;
+  }
+  const splitArr = split(arr);
+  return merge(mergeSort(splitArr[0]), mergeSort(splitArr[1]));
+}
